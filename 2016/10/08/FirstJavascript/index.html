@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="#JavaScript 中两种类型的全局对象/函数
-###一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infin">
+<meta name="description" content="JavaScript 中两种类型的全局对象/函数一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infinity，u">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FirstJavascript">
 <meta property="og:url" content="http://yoursite.com/2016/10/08/FirstJavascript/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#JavaScript 中两种类型的全局对象/函数
-###一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infin">
-<meta property="og:updated_time" content="2016-10-08T06:30:03.540Z">
+<meta property="og:description" content="JavaScript 中两种类型的全局对象/函数一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infinity，u">
+<meta property="og:updated_time" content="2016-10-08T07:03:45.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FirstJavascript">
-<meta name="twitter:description" content="#JavaScript 中两种类型的全局对象/函数
-###一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infin">
+<meta name="twitter:description" content="JavaScript 中两种类型的全局对象/函数一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infinity，u">
 
 
 
@@ -177,7 +174,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -187,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -250,7 +247,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-10-08T13:46:25+08:00" content="2016-10-08">
               2016-10-08
             </time>
@@ -279,11 +276,47 @@
       
 
       
-        <p>#JavaScript 中两种类型的全局对象/函数</p>
-<p>###一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象<br>　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：<br>　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infinity，undefined。<br>　　2， 函数属性的全局对象(Function Properties of the Global Object)。有eval，parseInt，parseFloat，isNaN，isFinite，decodeURI，encodedURI，encodeURIComponent<br>　　3，构造器(类)属性的全局对象(Constructor Properties of the Global Object)。有Object，Function，Array，String，Boolean，Number，Date，RegExp，Error，EvalError，<br>RangeError，ReferenceError，SyntaxError，TypeError，URIError。<br>　　4，其它属性的全局对象(Other Properties of the Global Object)，可以看出成是Java中的静态类，可以直接用类名+点号+方法名使用。有Math，JSON。<br>　　ECMAScript规范提到这些全局对象(The Global Object)是具有Writable属性的，即Writable为true，枚举性(Enumerable)为false，即不能用for in枚举。ECMAScript有这么一段：<br>　　Unless otherwise specified, the standard built-in properties of the global object have attributes {[[Writable]]: true, [[Enumerable]]: false, [[Configurable]]: true}.<br>　　虽然规范提到The Global Object是可以被重写的，但不会有谁去重写它们的。这里仅仅做个测试。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">NaN    = 11;</div><div class="line"><span class="built_in">eval</span>   = 22;</div><div class="line">Object = 33;</div><div class="line">Math   = 44;</div><div class="line"></div><div class="line">alert(NaN);</div><div class="line">alert(<span class="built_in">eval</span>);</div><div class="line">alert(Object);</div><div class="line">alert(Math);</div></pre></td></tr></table></figure></p>
+        <h1 id="JavaScript-中两种类型的全局对象-函数"><a href="#JavaScript-中两种类型的全局对象-函数" class="headerlink" title="JavaScript 中两种类型的全局对象/函数"></a>JavaScript 中两种类型的全局对象/函数</h1><h3 id="一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象"><a href="#一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象" class="headerlink" title="一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象"></a>一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象</h3><p>　　这些对象在程序执行之前就已经（实例化）存在了。ECMAScript称为The Global Object，分为以下几种：<br>　　1， 值属性的全局对象(Value Properties of the Global Object)。有NaN，Infinity，undefined。<br>　　2， 函数属性的全局对象(Function Properties of the Global Object)。有eval，parseInt，parseFloat，isNaN，isFinite，decodeURI，encodedURI，encodeURIComponent<br>　　3，构造器(类)属性的全局对象(Constructor Properties of the Global Object)。有Object，Function，Array，String，Boolean，Number，Date，RegExp，Error，EvalError，<br>RangeError，ReferenceError，SyntaxError，TypeError，URIError。<br>　　4，其它属性的全局对象(Other Properties of the Global Object)，可以看出成是Java中的静态类，可以直接用类名+点号+方法名使用。有Math，JSON。<br>　　ECMAScript规范提到这些全局对象(The Global Object)是具有Writable属性的，即Writable为true，枚举性(Enumerable)为false，即不能用for in枚举。ECMAScript有这么一段：<br>　　Unless otherwise specified, the standard built-in properties of the global object have attributes {[[Writable]]: true, [[Enumerable]]: false, [[Configurable]]: true}.<br>　　虽然规范提到The Global Object是可以被重写的，但不会有谁去重写它们的。这里仅仅做个测试。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">NaN    = 11;</div><div class="line"><span class="built_in">eval</span>   = 22;</div><div class="line">Object = 33;</div><div class="line">Math   = 44;</div><div class="line">alert(NaN);</div><div class="line">alert(<span class="built_in">eval</span>);</div><div class="line">alert(Object);</div><div class="line">alert(Math);</div></pre></td></tr></table></figure></p>
 <p>　　分别取值属性的全局对象， 函数属性的全局对象，构造器(类)属性的全局对象，其它属性的全局对象NaN，eval，Object，Math。结果如下：</p>
-<p>　　结果可以看出除了NaN在IE9(pre3)/Safari不能被重写外，其它都被重写了。这里只是列举了四个，感兴趣的可以将以上所有的The Global Object一一测试下。这里想表达的是核心JavaScript内置对象一般是可以被重写的 ，虽然没人这么干。<br>　　下面测试下其可枚举性：<br>for(var a in NaN){<br>    alert(a);<br>}<br>for(var a in eval){<br>    alert(a);<br>}<br>for(var a in Object){<br>    alert(a);<br>}<br>for(var a in Math){<br>    alert(a);<br>}<br>　　所有浏览器都没有弹出，即属性不被枚举。感兴趣的可以将以上所有的The Global Object的枚举性一一测试下。当然对于有些浏览器如Firefox，某些Global Object被重写后又是可以被枚举的。<br>　　二、宿主环境提供的全局对象/函数<br>　　如window,alert,setTimeout,document,location等，多数浏览器都会限制其重：<br>window = 55;<br>alert(window);<br>　　该句在IE下会出错提示非法复制，后面的弹出框没有执行。其它浏览器则当window=55不存在，仍然弹出了window。<br>　　再重写下alert：<br>alert = 55;<br>console.log(alert);<br>　　IE下提示报错，Firefox/Chrome/Safari/Opera竟然被重写了，从对应的控制台可以看到输出了55。可以看出对于宿主环境提供的全局对象/函数，有的浏览器不支持重写，有的则可以重写 。<br>　　以下是两种方式声明全局变：<br>a1 = 11;<br>var a2 = 22;</p>
-<p>for(a in window){<br>    if(a==’a1’||a==’a2’){<br>        alert(a)<br>    }<br>}<br>　　上述代码在IE中不会弹出信息框，在IE中内部大概如下：<br>//IE<br>with(host_object){//window<br>    with(global_object){//Global<br>        a1 = 11;<br>        var a2 = 22;<br>    }<br>}<br>　　即a1，a2是作为上面说的第一种，JS引擎提供的Global对象上的属性，而非第二种宿主环境提供的window对象上的属性。因此IE中for in window时a1，a2都不存在。如果IE中提供对象Global对象的引用，没准下面的代码可以弹出信息框。<br>for(a in Global){<br>    if(a==’a1’||a==’a2’){<br>        alert(a)<br>    }<br>}<br>　　Firefox/Safari/Chrome/Opera中内部大概是下面的样子：<br>//Firefox/Safari/Chrome/Opera<br>with(host_object){//window<br>    a1 = 11;<br>    var a2 = 22;<br>    with(global_object){//Global<br>    }<br>}<br>　　即a1,a2是作为上面说的第二种，宿主环境提供的全局对象window上的属性。因此for in window时a1，a2都存在，弹出了信息框。<br>　　再看第三者方式声明全局变量window.a3 = 33，这样是显示的把a3挂在window上作为window的属性，因此在所有浏览器中for in window时都能获取到a3。</p>
+<table>
+<thead>
+<tr>
+<th>测试对象</th>
+<th>IE6/7/8 Firefox/Chorme/Opera</th>
+<th>IE9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert(NaN)</td>
+<td>11</td>
+<td>NAN</td>
+</tr>
+<tr>
+<td>alert(eval)</td>
+<td>22</td>
+<td>22</td>
+</tr>
+<tr>
+<td>alert(Object)</td>
+<td>33</td>
+<td>33</td>
+</tr>
+<tr>
+<td>alert(Math)</td>
+<td>44</td>
+<td>44</td>
+</tr>
+</tbody>
+</table>
+<p>　　结果可以看出除了NaN在IE9(pre3)/Safari不能被重写外，其它都被重写了。这里只是列举了四个，感兴趣的可以将以上所有的The Global Object一一测试下。这里想表达的是核心JavaScript内置对象一般是可以被重写的 ，虽然没人这么干。<br>　　下面测试下其可枚举性：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(var a <span class="keyword">in</span> NaN)&#123;</div><div class="line">    alert(a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(var a <span class="keyword">in</span> <span class="built_in">eval</span>)&#123;</div><div class="line">    alert(a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(var a <span class="keyword">in</span> Object)&#123;</div><div class="line">    alert(a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(var a <span class="keyword">in</span> Math)&#123;</div><div class="line">    alert(a);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>　　所有浏览器都没有弹出，即属性不被枚举。感兴趣的可以将以上所有的The Global Object的枚举性一一测试下。当然对于有些浏览器如Firefox，某些Global Object被重写后又是可以被枚举的。<br>　　二、宿主环境提供的全局对象/函数<br>　　如window,alert,setTimeout,document,location等，多数浏览器都会限制其重：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">window = 55;</div><div class="line">alert(window);</div></pre></td></tr></table></figure></p>
+<p>　　该句在IE下会出错提示非法复制，后面的弹出框没有执行。其它浏览器则当window=55不存在，仍然弹出了window。<br>　　再重写下alert：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert = 55;</div><div class="line">console.log(alert);</div></pre></td></tr></table></figure></p>
+<p>　　IE下提示报错，Firefox/Chrome/Safari/Opera竟然被重写了，从对应的控制台可以看到输出了55。可以看出对于宿主环境提供的全局对象/函数，有的浏览器不支持重写，有的则可以重写 。<br>　　以下是两种方式声明全局变：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a1 = 11;</div><div class="line">var a2 = 22;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(a <span class="keyword">in</span> window)&#123;</div><div class="line">    <span class="keyword">if</span>(a==<span class="string">'a1'</span>||a==<span class="string">'a2'</span>)&#123;</div><div class="line">        alert(a)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　上述代码在IE中不会弹出信息框，在IE中内部大概如下：<br>//IE<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">with(host_object)&#123;//window</div><div class="line">    with(global_object)&#123;//Global</div><div class="line">        a1 = 11;</div><div class="line">        var a2 = 22;</div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　即a1，a2是作为上面说的第一种，JS引擎提供的Global对象上的属性，而非第二种宿主环境提供的window对象上的属性。因此IE中for in window时a1，a2都不存在。如果IE中提供对象Global对象的引用，没准下面的代码可以弹出信息框。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(a <span class="keyword">in</span> Global)&#123;</div><div class="line">    <span class="keyword">if</span>(a==<span class="string">'a1'</span>||a==<span class="string">'a2'</span>)&#123;</div><div class="line">        alert(a)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">　　Firefox/Safari/Chrome/Opera中内部大概是下面的样子：</div><div class="line">//Firefox/Safari/Chrome/Opera</div><div class="line">with(host_object)&#123;//window</div><div class="line">    a1 = 11;</div><div class="line">    var a2 = 22;</div><div class="line">    with(global_object)&#123;//Global</div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　即a1,a2是作为上面说的第二种，宿主环境提供的全局对象window上的属性。因此for in window时a1，a2都存在，弹出了信息框。<br>　　再看第三者方式声明全局变量window.a3 = 33，这样是显示的把a3挂在window上作为window的属性，因此在所有浏览器中for in window时都能获取到a3。</p>
 
       
     </div>
@@ -364,10 +397,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -384,7 +417,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -415,7 +448,7 @@
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-中两种类型的全局对象-函数"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 中两种类型的全局对象/函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、核心JavaScript内置对象，即ECMAScript实现提供的不依赖于宿主环境的对象</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -442,7 +475,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
